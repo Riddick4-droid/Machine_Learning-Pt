@@ -2,9 +2,14 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib import style
 from sklearn.preprocessing import MinMaxScaler
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
+
+#setting the visualization style
+style.use('ggplot')
+
 
 # Load data (replace 'your_stock_data.csv' with your dataset)
 data = pd.read_csv('your_stock_data.csv')  # Ensure the file has a 'Date' and 'Close' column
@@ -55,7 +60,7 @@ y_test = scaler.inverse_transform(y_test)
 
 # Plot results
 plt.figure(figsize=(12, 6))
-plt.plot(data.index[-len(y_test):], y_test, color='blue', label='Actual Price')
+plt.plot(data.index[-len(y_test):], y_test, color='green', label='Actual Price')
 plt.plot(data.index[-len(predictions):], predictions, color='red', label='Predicted Price')
 plt.title('Stock Price Prediction')
 plt.xlabel('Date')

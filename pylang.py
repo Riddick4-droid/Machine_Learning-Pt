@@ -8,7 +8,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 
 #setting the visualization style
-style.use('ggplot')
+style.use('fivethirtyeight')
 
 
 # Load data (replace 'your_stock_data.csv' with your dataset)

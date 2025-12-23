@@ -1,0 +1,1 @@
+A collection of machine learning experiments, models, and utilities exploring core concepts such as data preprocessing, model training, evaluation, and deployment. This repository serves as a practical workspace for learning, prototyping, and documenting ML workflows.
